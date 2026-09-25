@@ -56,6 +56,24 @@ Every note tool includes a `"vault"` key in its response, so the model always kn
 
 You need Python 3.10 or newer.
 
+### Let Claude Code set it up
+
+This is how I install it on a new machine. Open Claude Code in the folder where you keep your projects and paste this prompt.
+
+```text
+Clone https://github.com/cyber-sami/obsidian-guarded-mcp and set it up for me
+by following its README. Install the dependencies with uv (or pip if uv is not
+available) and run the tests. Then ask me for the names and paths of my Obsidian
+vaults and create vaults.json from them. Check that each path exists and
+contains a .obsidian folder. Finally, register the server with Claude Code and,
+if I use it, Claude Desktop. Back up any config file before you edit it, and keep
+the servers that are already in it.
+```
+
+Claude Code will ask for approval before running commands and editing files, so you can follow each step. If you'd rather do it by hand, the steps are below.
+
+### Manual install
+
 With [uv](https://docs.astral.sh/uv/):
 
 ```bash
